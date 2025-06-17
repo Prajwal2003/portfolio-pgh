@@ -3,56 +3,56 @@ import { Github, Linkedin, Mail, Heart, Code2 } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-16">
+    <footer className="bg-gray-950 text-white py-20 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
-          <div className="mb-8">
-            <div className="flex items-center justify-center mb-6">
-              <Code2 className="text-cyan-400 mr-3" size={36} />
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="mb-12">
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-10 h-10 border border-white/20 rounded-2xl flex items-center justify-center mr-4">
+                <div className="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+              <h3 className="text-2xl font-light tracking-wide text-white">
                 Loren Lin
               </h3>
             </div>
-            <p className="text-purple-200 max-w-md mx-auto text-lg leading-relaxed">
+            <p className="text-gray-400 max-w-md mx-auto text-lg leading-relaxed font-light">
               Full-stack developer passionate about creating 
-              <span className="text-cyan-400 font-semibold"> beautiful </span> and 
-              <span className="text-pink-400 font-semibold"> functional </span> 
+              <span className="text-gray-300 font-normal"> beautiful </span> and 
+              <span className="text-gray-300 font-normal"> functional </span> 
               web experiences.
             </p>
           </div>
 
-          <div className="flex items-center justify-center space-x-6 mb-12">
+          <div className="flex items-center justify-center space-x-8 mb-16">
             <a 
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-4 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30 group"
+              className="p-4 border border-white/10 rounded-full hover:border-white/30 transition-all duration-300 hover:scale-110 hover:bg-white/5 group"
             >
-              <Github size={24} className="group-hover:rotate-12 transition-transform" />
+              <Github size={20} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-4 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/30 group"
+              className="p-4 border border-white/10 rounded-full hover:border-white/30 transition-all duration-300 hover:scale-110 hover:bg-white/5 group"
             >
-              <Linkedin size={24} className="group-hover:rotate-12 transition-transform" />
+              <Linkedin size={20} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
             <a 
               href="mailto:hello@lorenclin.co"
-              className="p-4 bg-gradient-to-r from-slate-700 to-slate-800 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30 group"
+              className="p-4 border border-white/10 rounded-full hover:border-white/30 transition-all duration-300 hover:scale-110 hover:bg-white/5 group"
             >
-              <Mail size={24} className="group-hover:rotate-12 transition-transform" />
+              <Mail size={20} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
           </div>
 
-          <div className="border-t border-slate-700 pt-8">
-            <p className="text-purple-300 flex items-center justify-center space-x-2 text-lg">
+          <div className="border-t border-white/10 pt-8">
+            <p className="text-gray-400 flex items-center justify-center space-x-2 text-sm font-light tracking-wide">
               <span>© 2024 Loren Lin. Made with</span>
-              <Heart size={18} className="text-red-500 animate-pulse" fill="currentColor" />
-              <span>and lots of</span>
-              <span className="text-yellow-400 font-semibold">creative energy</span>
-              <span>☕</span>
+              <Heart size={14} className="text-gray-500" />
+              <span>and attention to detail</span>
             </p>
           </div>
         </div>
