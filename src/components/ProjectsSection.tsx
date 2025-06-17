@@ -30,15 +30,15 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-32 bg-gray-950">
+    <section id="projects" className="py-32 bg-gray-950 relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-8">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/30"></div>
-            <span className="text-gray-400 font-light text-sm tracking-widest mx-8 uppercase">Portfolio</span>
+            <span className="text-gray-400 font-light text-sm tracking-[0.3em] mx-8 uppercase">Portfolio</span>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/30"></div>
           </div>
-          <h2 className="text-5xl md:text-6xl font-extralight text-white mb-8 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-extralight text-white mb-8 tracking-tight leading-tight">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
@@ -51,27 +51,28 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-gray-900 rounded-2xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-500 hover:-translate-y-2 group"
+              className="bg-gray-900 rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl hover:shadow-white/10 group"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="relative h-48 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-full p-2">
-                    <Star className="text-gray-400" size={16} />
+                <div className="absolute top-4 right-4 z-20 group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-2 group-hover:border-white/30 transition-all duration-300">
+                    <Star className="text-gray-400 group-hover:text-white transition-colors duration-300" size={16} />
                   </div>
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-light text-white mb-3 group-hover:text-gray-200 transition-colors tracking-wide">
+                <h3 className="text-xl font-light text-white mb-3 group-hover:text-gray-200 transition-colors duration-300 tracking-wide">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-6 leading-relaxed font-light text-sm">
+                <p className="text-gray-400 mb-6 leading-relaxed font-light text-sm group-hover:text-gray-300 transition-colors duration-300">
                   {project.description}
                 </p>
                 
@@ -79,31 +80,31 @@ export const ProjectsSection = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 bg-white/5 border border-white/10 text-gray-300 text-xs rounded-full font-light tracking-wide"
+                      className="px-3 py-1.5 bg-white/5 border border-white/10 text-gray-300 text-xs rounded-xl font-light tracking-wide hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center justify-between">
                   <a 
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group/link"
+                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-all duration-300 group/link hover:scale-105"
                   >
-                    <Github size={16} className="group-hover/link:scale-110 transition-transform" />
+                    <Github size={16} className="group-hover/link:rotate-12 transition-transform duration-300" />
                     <span className="font-light text-sm tracking-wide">Code</span>
                   </a>
                   <a 
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 border border-white/20 text-white px-4 py-2 rounded-full hover:border-white/40 hover:bg-white/5 transition-all duration-300 group/link"
+                    className="flex items-center space-x-2 border border-white/20 text-white px-4 py-2.5 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/link hover:scale-105 hover:shadow-lg hover:shadow-white/10"
                   >
-                    <ExternalLink size={14} className="group-hover/link:scale-110 transition-transform" />
-                    <span className="font-light text-xs tracking-wide uppercase">View</span>
+                    <ExternalLink size={14} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
+                    <span className="font-light text-xs tracking-[0.1em] uppercase">View</span>
                   </a>
                 </div>
               </div>
