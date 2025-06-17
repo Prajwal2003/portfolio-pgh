@@ -54,6 +54,13 @@ export const Navigation = () => {
               <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-white to-transparent group-hover:w-full transition-all duration-500"></span>
             </button>
             <button 
+              onClick={() => scrollToSection("experience")}
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm tracking-[0.2em] uppercase relative group py-2"
+            >
+              Experience
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-white to-transparent group-hover:w-full transition-all duration-500"></span>
+            </button>
+            <button 
               onClick={() => scrollToSection("projects")}
               className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm tracking-[0.2em] uppercase relative group py-2"
             >
@@ -92,7 +99,7 @@ export const Navigation = () => {
         }`}>
           <div className="py-8 bg-black/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
             <div className="flex flex-col space-y-6">
-              {['home', 'about', 'projects', 'contact'].map((section, index) => (
+              {['home', 'about', 'experience', 'projects', 'contact'].map((section, index) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
