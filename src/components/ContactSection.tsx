@@ -3,8 +3,9 @@ import { Mail, MapPin, Phone, Github, Linkedin, Heart } from "lucide-react";
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-32 bg-gray-950 relative overflow-hidden">
+    <footer className="py-32 bg-gray-950 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
+        {/* Contact Section */}
         <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-8">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/30"></div>
@@ -98,7 +99,7 @@ export const ContactSection = () => {
 
             <div className="border-t border-white/10 pt-8">
               <p className="text-gray-400 flex items-center justify-center space-x-2 text-sm font-light tracking-wide">
-                <span>© 2024 Prajwal G Hoolageri. Made with</span>
+                <span>© 2025 Prajwal G Hoolageri. Made with</span>
                 <Heart size={14} className="text-gray-500" />
                 <span>and attention to detail</span>
               </p>
@@ -106,6 +107,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };

@@ -1,59 +1,52 @@
 
 import { ExternalLink, Github } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const projects = [
   {
-    id: "lms-aspiring-gems",
     title: "LMS for Aspiring Gems",
-    description: "Developed a full-stack Learning Management System using Node.js, Express, React, and SQL. Implemented secure authentication, content uploads, quizzes, progress tracking, and admin dashboards.",
+    description: "Developed a full-stack Learning Management System using Node.js, Express, React, and SQL. Implemented secure authentication, content uploads, quizzes, progress tracking, and admin dashboards. Enabled teachers, students, and admins to manage courses, materials, and analytics efficiently.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-    technologies: ["React.js", "Node.js", "Express.js", "MySQL", "REST APIs"],
+    technologies: ["React.js", "Node.js", "Express.js", "REST APIs", "MySQL", "Git", "Software Deployment"],
     githubUrl: "https://github.com",
     period: "May 2025"
   },
   {
-    id: "smart-traffic-management",
     title: "Smart Traffic Management System",
-    description: "Developed an AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection and classification from CCTV feeds. Implemented adaptive traffic signal control using dynamic green time algorithms.",
+    description: "Developed an AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection and classification from CCTV feeds. Implemented adaptive traffic signal control using dynamic green time algorithms, edge computing, and IRC-compliant formulas.",
     image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "YOLOv11", "Computer Vision", "Machine Learning", "Streamlit"],
+    technologies: ["Python", "Streamlit", "Machine Learning", "Model Training", "YOLOv11", "Computer Vision", "CenterNet"],
     githubUrl: "https://github.com",
     period: "Oct 2024 - Feb 2025"
   },
   {
-    id: "twitter-web-scraping",
     title: "Twitter Web Scraping",
     description: "Uses proxy server, IP rotation and opens up Twitter, opens up the trending page and gets top 5 trending topics. Stores these in the Database for webpage to pick and display.",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Selenium", "Flask", "MongoDB", "Proxy Server"],
+    technologies: ["Python", "Selenium", "Selenium WebDriver", "Web Development", "Flask", "MongoDB", "Proxy Server"],
     githubUrl: "https://github.com",
     period: "Jan 2025"
   },
   {
-    id: "automated-seating-arrangement",
     title: "Automated Seating Arrangement System",
-    description: "Designed and implemented an automated exam seating arrangement system for our college, replacing the previously used manual process. Allows users to add students through Excel or CSV format in batches.",
+    description: "Designed and implemented an automated exam seating arrangement system for our college, replacing the previously used manual process. Allows users to add students through Excel or CSV format in batches or single entries and allot seats according to branches separately for each subject.",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "jQuery"],
+    technologies: ["HTML", "CSS", "jQuery", "JavaScript", "PHP", "PhpMyAdmin", "SQL", "RDBMS", "Git", "GitHub"],
     githubUrl: "https://github.com",
     period: "Feb 2024 - May 2024"
   },
   {
-    id: "resource-chain",
     title: "ResourceChain",
-    description: "Designed a user-friendly mobile application facilitating donors' clothes, medicine, and edibles. Implemented a system where spotters identify individuals in need and update the app with details.",
+    description: "Designed a user-friendly mobile application facilitating donors' clothes, medicine, and edibles. Implemented a system where spotters identify individuals in need or those who require items for personal use and update the app with the details.",
     image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80",
-    technologies: ["Flutter", "API Integration", "Front-End Design"],
+    technologies: ["Flutter", "Front-End Design", "Application Programming Interfaces (API)"],
     githubUrl: "https://github.com",
     period: "Aug 2023 - Dec 2023"
   },
   {
-    id: "weather-webpage",
     title: "Weather Webpage",
-    description: "Developed a dynamic website that utilizes location detection to provide accurate weather updates for a week ahead. Implemented features to display wind speed, humidity, and other weather parameters.",
+    description: "Developed a dynamic website that utilizes location detection to provide accurate weather updates for a week ahead. Implemented features to display additional details such as wind speed, humidity, and other essential weather parameters.",
     image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80",
-    technologies: ["HTML", "CSS", "JavaScript", "API", "jQuery"],
+    technologies: ["HTML", "CSS", "JavaScript", "Application Programming Interfaces (API)", "jQuery", "User Interface Design", "Git", "GitHub"],
     githubUrl: "https://github.com",
     period: "May 2023 - Jun 2023"
   }
@@ -118,23 +111,16 @@ export const ProjectsSection = () => {
                   ))}
                 </div>
                 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-center">
                   <a 
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-all duration-300 group/link hover:scale-105"
+                    className="flex items-center space-x-3 border border-white/20 text-white px-6 py-3 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/link hover:scale-105 hover:shadow-lg hover:shadow-white/10"
                   >
                     <Github size={16} className="group-hover/link:rotate-12 transition-transform duration-300" />
-                    <span className="font-light text-sm tracking-wide">Code</span>
+                    <span className="font-light text-sm tracking-wide">View Code</span>
                   </a>
-                  <Link 
-                    to={`/project/${project.id}`}
-                    className="flex items-center space-x-2 border border-white/20 text-white px-4 py-2.5 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/link hover:scale-105 hover:shadow-lg hover:shadow-white/10"
-                  >
-                    <ExternalLink size={14} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
-                    <span className="font-light text-xs tracking-[0.1em] uppercase">View</span>
-                  </Link>
                 </div>
               </div>
             </div>
