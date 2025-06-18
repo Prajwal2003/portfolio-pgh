@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone, Github, Linkedin, Heart } from "lucide-react";
 
 export const ContactSection = () => {
   return (
-    <footer className="py-32 bg-gray-950 relative overflow-hidden">
+    <section id="contact" className="py-32 bg-gray-950 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Contact Section */}
         <div className="text-center mb-20">
@@ -59,7 +59,7 @@ export const ContactSection = () => {
 
           <div className="flex items-center justify-center space-x-8 mt-16">
             <a 
-              href="https://github.com" 
+              href="https://github.com/prajwalgh13" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-4 border border-white/10 rounded-2xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:bg-white/5 hover:shadow-lg hover:shadow-white/10 group"
@@ -67,7 +67,7 @@ export const ContactSection = () => {
               <Github size={24} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/prajwalgh13" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-4 border border-white/10 rounded-2xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:bg-white/5 hover:shadow-lg hover:shadow-white/10 group"
@@ -77,7 +77,7 @@ export const ContactSection = () => {
           </div>
         </div>
 
-        {/* Footer Section */}
+        {/* Footer Section - Combined */}
         <div className="border-t border-white/10 pt-20">
           <div className="text-center">
             <div className="mb-12">
@@ -107,6 +107,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };

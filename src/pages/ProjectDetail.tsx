@@ -1,67 +1,127 @@
 
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Github, ExternalLink, Calendar, Users, Code, CheckCircle, Clock, Play } from "lucide-react";
+import { ArrowLeft, Github, Calendar, Code, CheckCircle } from "lucide-react";
 
 const projectData = {
-  "ecommerce-platform": {
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-    longDescription: "This comprehensive e-commerce platform showcases modern web development practices with a focus on user experience and scalability. The application features a clean, responsive design with advanced filtering capabilities, real-time inventory management, and secure payment processing through Stripe integration.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Express.js", "JWT"],
+  "lms-aspiring-gems": {
+    title: "LMS for Aspiring Gems",
+    description: "Developed a full-stack Learning Management System using Node.js, Express, React, and SQL.",
+    longDescription: "LMS Website for Aspiring Gems - Developed a full-stack Learning Management System using Node.js, Express, React, and SQL. Implemented secure authentication, content uploads, quizzes, progress tracking, and admin dashboards. Enabled teachers, students, and admins to manage courses, materials, and analytics efficiently. Designed responsive UI and robust RESTful APIs for seamless digital learning experiences.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["React.js", "Node.js", "Express.js", "REST APIs", "MySQL", "Git", "Software Deployment"],
     features: [
-      "User authentication and authorization",
-      "Shopping cart and checkout system",
-      "Admin dashboard for inventory management",
-      "Real-time order tracking",
-      "Payment processing with Stripe",
-      "Responsive design for all devices"
+      "Secure user authentication and authorization",
+      "Content upload and management system",
+      "Interactive quiz creation and management",
+      "Real-time progress tracking for students",
+      "Comprehensive admin dashboard",
+      "Responsive UI design for all devices"
     ],
     githubUrl: "https://github.com",
-    demoUrl: "https://example.com",
-    duration: "3 months",
+    duration: "1 month",
     teamSize: "Solo project",
-    status: "Completed"
+    status: "Completed",
+    period: "May 2025"
   },
-  "task-management-app": {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    longDescription: "A sophisticated task management platform designed for teams to collaborate effectively. Built with React and Firebase, it offers real-time synchronization, intuitive drag-and-drop interfaces, and comprehensive project tracking capabilities.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=1200&q=80",
-    technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS", "React DnD", "Zustand"],
+  "smart-traffic-management": {
+    title: "Smart Traffic Management System",
+    description: "AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection.",
+    longDescription: "Developed an AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection and classification from CCTV feeds. Implemented adaptive traffic signal control using dynamic green time algorithms, edge computing, and IRC-compliant formulas. Integrated emergency vehicle prioritization and low-latency decision-making for optimized traffic flow and enhanced road safety. Works with priority lane buses like Chigari as well allowing for better traffic management.",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["Python", "Streamlit", "Machine Learning", "Model Training", "Label Studio", "Git", "GitHub", "YOLOv11", "Computer Vision", "CenterNet"],
     features: [
-      "Real-time collaboration",
-      "Drag-and-drop task management",
-      "Team member assignment",
-      "Progress tracking and analytics",
-      "File attachments and comments",
-      "Mobile-responsive interface"
+      "Real-time vehicle detection and classification",
+      "Adaptive traffic signal control algorithms",
+      "Emergency vehicle prioritization system",
+      "Integration with priority lane buses",
+      "Edge computing for low-latency processing",
+      "IRC-compliant traffic management formulas"
     ],
     githubUrl: "https://github.com",
-    demoUrl: "https://example.com",
-    duration: "2 months",
-    teamSize: "2 developers",
-    status: "In Development"
+    duration: "5 months",
+    teamSize: "Team project",
+    status: "Completed",
+    period: "Oct 2024 - Feb 2025"
   },
-  "analytics-dashboard": {
-    title: "Analytics Dashboard",
-    description: "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
-    longDescription: "An advanced analytics platform that transforms complex data into actionable insights. Built with Vue.js and D3.js, it provides interactive visualizations, real-time data processing, and customizable reporting capabilities for business intelligence.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-    technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL", "FastAPI", "WebSocket"],
+  "twitter-web-scraping": {
+    title: "Twitter Web Scraping",
+    description: "Advanced web scraping system with proxy rotation for trending topics extraction.",
+    longDescription: "Uses proxy server, IP rotation and opens up Twitter, opens up the trending page and gets top 5 trending topics. Stores these in the Database for webpage to pick and display. Implemented robust scraping mechanisms to handle rate limiting and anti-bot measures.",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["Python", "Selenium", "Selenium WebDriver", "Web Development", "Flask", "MongoDB", "Proxy Server"],
     features: [
-      "Interactive data visualizations",
-      "Real-time data streaming",
-      "Customizable dashboard layouts",
-      "Export capabilities (PDF, CSV)",
-      "User role management",
-      "API integration support"
+      "Proxy server implementation with IP rotation",
+      "Automated Twitter trending page navigation",
+      "Top 5 trending topics extraction",
+      "Database storage for retrieved data",
+      "Web interface for data display",
+      "Anti-detection mechanisms"
     ],
     githubUrl: "https://github.com",
-    demoUrl: "https://example.com",
+    duration: "1 month",
+    teamSize: "Solo project",
+    status: "Completed",
+    period: "Jan 2025"
+  },
+  "automated-seating-arrangement": {
+    title: "Automated Seating Arrangement System",
+    description: "Comprehensive exam seating arrangement system for educational institutions.",
+    longDescription: "Designed and implemented an automated exam seating arrangement system for our college, replacing the previously used manual process. Implemented all the requirements presented by the Controller of Examination of our College. This allows users to add students through Excel or CSV format in batches or single entries and allot seats according to branches separately for each subject and allot invigilators for each class. Users gets allotment in PDF and Excel format for further use.",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["HTML", "CSS", "jQuery", "JavaScript", "PHP", "PhpMyAdmin", "SQL", "RDBMS", "Git", "GitHub"],
+    features: [
+      "Bulk student data import via Excel/CSV",
+      "Branch-wise seat allocation system",
+      "Subject-specific arrangement capabilities",
+      "Invigilator assignment functionality",
+      "PDF and Excel export features",
+      "User-friendly administrative interface"
+    ],
+    githubUrl: "https://github.com",
     duration: "4 months",
-    teamSize: "3 developers",
-    status: "Completed"
+    teamSize: "Team project",
+    status: "Completed",
+    period: "Feb 2024 - May 2024"
+  },
+  "resourcechain": {
+    title: "ResourceChain",
+    description: "Mobile application connecting donors with people in need of essential items.",
+    longDescription: "Designed a user-friendly mobile application facilitating donors' clothes, medicine, and edibles. Implemented a system where spotters identify individuals in need or those who require items for personal use and update the app with the details. Created a comprehensive platform for community resource sharing and charitable giving.",
+    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["Flutter", "Front-End Design", "Application Programming Interfaces (API)"],
+    features: [
+      "User-friendly mobile interface",
+      "Donor and recipient matching system",
+      "Spotter network for need identification",
+      "Multi-category resource management",
+      "Real-time notification system",
+      "Secure user authentication"
+    ],
+    githubUrl: "https://github.com",
+    duration: "5 months",
+    teamSize: "Team project",
+    status: "Completed",
+    period: "Aug 2023 - Dec 2023"
+  },
+  "weather-webpage": {
+    title: "Weather Webpage",
+    description: "Dynamic weather application with location detection and comprehensive forecasting.",
+    longDescription: "Developed a dynamic website that utilizes location detection to provide accurate weather updates for a week ahead. Implemented features to display additional details such as wind speed, humidity, and other essential weather parameters. Created an intuitive interface for easy weather information consumption.",
+    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["HTML", "CSS", "JavaScript", "Application Programming Interfaces (API)", "jQuery", "User Interface Design", "Git", "GitHub"],
+    features: [
+      "Automatic location detection",
+      "7-day weather forecast",
+      "Detailed weather parameters display",
+      "Wind speed and humidity tracking",
+      "Responsive design for all devices",
+      "Real-time weather data integration"
+    ],
+    githubUrl: "https://github.com",
+    duration: "2 months",
+    teamSize: "Solo project",
+    status: "Completed",
+    period: "May 2023 - Jun 2023"
   }
 };
 
@@ -83,30 +143,16 @@ const ProjectDetail = () => {
   }
 
   const getStatusIcon = (status: string) => {
-    switch (status) {
-      case "Completed":
-        return <CheckCircle className="text-green-400" size={20} />;
-      case "In Development":
-        return <Clock className="text-yellow-400" size={20} />;
-      default:
-        return <Play className="text-blue-400" size={20} />;
-    }
+    return <CheckCircle className="text-green-400" size={20} />;
   };
 
   const getStatusColor = (status: string) => {
-    switch (status) {
-      case "Completed":
-        return "text-green-400 border-green-400/20 bg-green-400/5";
-      case "In Development":
-        return "text-yellow-400 border-yellow-400/20 bg-yellow-400/5";
-      default:
-        return "text-blue-400 border-blue-400/20 bg-blue-400/5";
-    }
+    return "text-green-400 border-green-400/20 bg-green-400/5";
   };
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Enhanced background elements */}
+      {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-800/20 to-gray-700/20 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-white/5 to-gray-600/10 rounded-full mix-blend-overlay filter blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -166,7 +212,7 @@ const ProjectDetail = () => {
               <div className="group">
                 <div className="flex items-center space-x-3 p-4 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/5">
                   <div className="p-2 border border-white/10 rounded-xl group-hover:border-white/30 transition-all duration-300">
-                    <Users className="text-gray-400 group-hover:text-white transition-colors duration-300" size={18} />
+                    <Code className="text-gray-400 group-hover:text-white transition-colors duration-300" size={18} />
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm font-light tracking-wide uppercase">Team Size</p>
@@ -185,15 +231,6 @@ const ProjectDetail = () => {
               >
                 <Github size={20} className="group-hover:rotate-12 transition-transform duration-300" />
                 <span className="font-light tracking-wide">View Code</span>
-              </a>
-              <a 
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-3 bg-white text-black px-8 py-4 rounded-2xl hover:bg-gray-200 transition-all duration-500 hover:scale-105 group hover:shadow-lg hover:shadow-white/20"
-              >
-                <ExternalLink size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                <span className="font-light tracking-wide">Live Demo</span>
               </a>
             </div>
           </div>

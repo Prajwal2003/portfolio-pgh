@@ -1,24 +1,28 @@
 
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
+    id: "lms-aspiring-gems",
     title: "LMS for Aspiring Gems",
-    description: "Developed a full-stack Learning Management System using Node.js, Express, React, and SQL. Implemented secure authentication, content uploads, quizzes, progress tracking, and admin dashboards. Enabled teachers, students, and admins to manage courses, materials, and analytics efficiently.",
+    description: "Developed a full-stack Learning Management System using Node.js, Express, React, and SQL. Implemented secure authentication, content uploads, quizzes, progress tracking, and admin dashboards. Enabled teachers, students, and admins to manage courses, materials, and analytics efficiently. Designed responsive UI and robust RESTful APIs for seamless digital learning experiences.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
     technologies: ["React.js", "Node.js", "Express.js", "REST APIs", "MySQL", "Git", "Software Deployment"],
     githubUrl: "https://github.com",
     period: "May 2025"
   },
   {
+    id: "smart-traffic-management",
     title: "Smart Traffic Management System",
-    description: "Developed an AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection and classification from CCTV feeds. Implemented adaptive traffic signal control using dynamic green time algorithms, edge computing, and IRC-compliant formulas.",
+    description: "Developed an AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection and classification from CCTV feeds. Implemented adaptive traffic signal control using dynamic green time algorithms, edge computing, and IRC-compliant formulas. Integrated emergency vehicle prioritization and low-latency decision-making for optimized traffic flow and enhanced road safety.",
     image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Streamlit", "Machine Learning", "Model Training", "YOLOv11", "Computer Vision", "CenterNet"],
+    technologies: ["Python", "Streamlit", "Machine Learning", "Model Training", "Label Studio", "Git", "GitHub", "YOLOv11", "Computer Vision", "CenterNet"],
     githubUrl: "https://github.com",
     period: "Oct 2024 - Feb 2025"
   },
   {
+    id: "twitter-web-scraping",
     title: "Twitter Web Scraping",
     description: "Uses proxy server, IP rotation and opens up Twitter, opens up the trending page and gets top 5 trending topics. Stores these in the Database for webpage to pick and display.",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
@@ -27,14 +31,16 @@ const projects = [
     period: "Jan 2025"
   },
   {
+    id: "automated-seating-arrangement",
     title: "Automated Seating Arrangement System",
-    description: "Designed and implemented an automated exam seating arrangement system for our college, replacing the previously used manual process. Allows users to add students through Excel or CSV format in batches or single entries and allot seats according to branches separately for each subject.",
+    description: "Designed and implemented an automated exam seating arrangement system for our college, replacing the previously used manual process. Implemented all the requirements presented by the Controller of Examination of our College. This allows users to add students through Excel or CSV format in batches or single entries and allot seats according to branches separately for each subject and allot invigilators for each class.",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
     technologies: ["HTML", "CSS", "jQuery", "JavaScript", "PHP", "PhpMyAdmin", "SQL", "RDBMS", "Git", "GitHub"],
     githubUrl: "https://github.com",
     period: "Feb 2024 - May 2024"
   },
   {
+    id: "resourcechain",
     title: "ResourceChain",
     description: "Designed a user-friendly mobile application facilitating donors' clothes, medicine, and edibles. Implemented a system where spotters identify individuals in need or those who require items for personal use and update the app with the details.",
     image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80",
@@ -43,6 +49,7 @@ const projects = [
     period: "Aug 2023 - Dec 2023"
   },
   {
+    id: "weather-webpage",
     title: "Weather Webpage",
     description: "Developed a dynamic website that utilizes location detection to provide accurate weather updates for a week ahead. Implemented features to display additional details such as wind speed, humidity, and other essential weather parameters.",
     image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80",
@@ -97,11 +104,11 @@ export const ProjectsSection = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-400 mb-6 leading-relaxed font-light text-sm group-hover:text-gray-300 transition-colors duration-300">
-                  {project.description}
+                  {project.description.substring(0, 120)}...
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
                     <span 
                       key={techIndex}
                       className="px-3 py-1.5 bg-white/5 border border-white/10 text-gray-300 text-xs rounded-xl font-light tracking-wide hover:bg-white/10 hover:border-white/20 transition-all duration-300"
@@ -109,17 +116,29 @@ export const ProjectsSection = () => {
                       {tech}
                     </span>
                   ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-3 py-1.5 bg-white/5 border border-white/10 text-gray-300 text-xs rounded-xl font-light tracking-wide">
+                      +{project.technologies.length - 3} more
+                    </span>
+                  )}
                 </div>
                 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-between">
+                  <Link 
+                    to={`/project/${project.id}`}
+                    className="flex items-center space-x-3 border border-white/20 text-white px-4 py-2 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/link hover:scale-105 hover:shadow-lg hover:shadow-white/10"
+                  >
+                    <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform duration-300" />
+                    <span className="font-light text-sm tracking-wide">View Details</span>
+                  </Link>
+                  
                   <a 
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 border border-white/20 text-white px-6 py-3 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/link hover:scale-105 hover:shadow-lg hover:shadow-white/10"
+                    className="p-2 border border-white/20 text-white rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/github hover:scale-105"
                   >
-                    <Github size={16} className="group-hover/link:rotate-12 transition-transform duration-300" />
-                    <span className="font-light text-sm tracking-wide">View Code</span>
+                    <Github size={16} className="group-hover/github:rotate-12 transition-transform duration-300" />
                   </a>
                 </div>
               </div>
