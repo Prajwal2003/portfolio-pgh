@@ -63,7 +63,7 @@ export const ContactSection = () => {
               {/* Social Links */}
               <div className="flex items-center justify-center space-x-6 mt-12">
                 <a 
-                  href="https://github.com/prajwalgh13" 
+                  href="https://github.com/prajwal2003" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-3 border border-white/10 rounded-xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group"
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                   <Github size={20} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/prajwalgh13" 
+                  href="https://www.linkedin.com/in/prajwal-g-hoolageri-527a11231/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-3 border border-white/10 rounded-xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group"
