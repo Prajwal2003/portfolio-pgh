@@ -23,10 +23,7 @@ export const Navigation = () => {
   };
 
   const handleResumeClick = () => {
-    // Create an empty PDF blob for now
-    const pdfBlob = new Blob([''], { type: 'application/pdf' });
-    const url = URL.createObjectURL(pdfBlob);
-    window.open(url, '_blank');
+    window.open('https://drive.google.com/file/d/1chVnJ_zDpg5HDVlgDVnzewzouUig-Go1/view?usp=sharing', '_blank');
     setIsMobileMenuOpen(false);
   };
 

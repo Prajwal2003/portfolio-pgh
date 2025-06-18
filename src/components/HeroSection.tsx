@@ -46,7 +46,7 @@ export const HeroSection = () => {
           </p>
           
           <p className="text-base text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_0.8s_ease-out_1.5s_forwards]">
-            Skilled in Python, React.js, Node.js, and ML technologies. Proven leadership and tech innovation.
+            Skilled in Python, MERN Stack, Designing, Testing and ML technologies.
           </p>
 
           {/* Contact Info */}
@@ -62,10 +62,10 @@ export const HeroSection = () => {
           </div>
           
           <div className="flex items-center justify-center space-x-8 mb-20 opacity-0 animate-[fade-in_0.8s_ease-out_2.1s_forwards]">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group">
+            <a href="https://github.com/Prajwal2003" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group">
               <Github size={24} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group">
+            <a href="https://www.linkedin.com/in/prajwal-g-hoolageri-527a11231/" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group">
               <Linkedin size={24} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
             <a href="mailto:prajwalgh13@gmail.com" className="p-4 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/5 group">
