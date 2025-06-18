@@ -1,6 +1,6 @@
 import { Code, Palette, Zap, Rocket } from "lucide-react";
 export const AboutSection = () => {
-  return <section id="about" className="py-32 bg-black relative my-0">
+  return <section id="about" className="pt-16 pb-32 bg-black relative my-0">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-8">
