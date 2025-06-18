@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,6 +22,14 @@ export const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleResumeClick = () => {
+    // Create an empty PDF blob for now
+    const pdfBlob = new Blob([''], { type: 'application/pdf' });
+    const url = URL.createObjectURL(pdfBlob);
+    window.open(url, '_blank');
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
       isScrolled 
@@ -34,23 +42,30 @@ export const Navigation = () => {
             <div className="w-8 h-8 border border-white/20 rounded-2xl flex items-center justify-center group-hover:border-white/40 transition-all duration-300 group-hover:scale-110">
               <div className="w-2 h-2 bg-white rounded-full group-hover:bg-gray-200 transition-colors duration-300"></div>
             </div>
-            <span className="text-white tracking-wide group-hover:text-gray-200 transition-colors duration-300">Loren Lin</span>
+            <span className="text-white tracking-wide group-hover:text-gray-200 transition-colors duration-300">Prajwal G Hoolageri</span>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-12">
             <button 
-              onClick={() => scrollToSection("home")}
-              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm tracking-[0.2em] uppercase relative group py-2"
+              onClick={handleResumeClick}
+              className="flex items-center space-x-2 border border-white/20 text-white px-6 py-3 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 font-light text-sm tracking-[0.2em] uppercase hover:scale-105 hover:shadow-lg hover:shadow-white/10"
             >
-              Home
-              <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-white to-transparent group-hover:w-full transition-all duration-500"></span>
+              <Download size={16} />
+              <span>Resume</span>
             </button>
             <button 
               onClick={() => scrollToSection("about")}
               className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm tracking-[0.2em] uppercase relative group py-2"
             >
               About
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-white to-transparent group-hover:w-full transition-all duration-500"></span>
+            </button>
+            <button 
+              onClick={() => scrollToSection("education")}
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm tracking-[0.2em] uppercase relative group py-2"
+            >
+              Education
               <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-white to-transparent group-hover:w-full transition-all duration-500"></span>
             </button>
             <button 
@@ -99,12 +114,19 @@ export const Navigation = () => {
         }`}>
           <div className="py-8 bg-black/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
             <div className="flex flex-col space-y-6">
-              {['home', 'about', 'experience', 'projects', 'contact'].map((section, index) => (
+              <button
+                onClick={handleResumeClick}
+                className="flex items-center justify-center space-x-2 text-gray-300 hover:text-white transition-all duration-300 px-6 font-light text-sm tracking-[0.2em] uppercase hover:bg-white/5 py-3 mx-4 rounded-xl"
+              >
+                <Download size={16} />
+                <span>Resume</span>
+              </button>
+              {['about', 'education', 'experience', 'projects', 'contact'].map((section, index) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className="text-gray-300 hover:text-white transition-all duration-300 px-6 font-light text-sm tracking-[0.2em] uppercase hover:bg-white/5 py-3 mx-4 rounded-xl"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
                   {section}
                 </button>

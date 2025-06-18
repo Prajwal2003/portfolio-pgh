@@ -1,4 +1,5 @@
-import { ArrowDown, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+
+import { ArrowDown, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 export const HeroSection = () => {
   const scrollToAbout = () => {
     const element = document.getElementById("about");
@@ -31,17 +32,29 @@ export const HeroSection = () => {
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight text-white mb-8 tracking-tight opacity-0 animate-[fade-in_1.2s_ease-out_1s_forwards] leading-none">
             <span className="block font-thin">Hi, I'm</span>
             <span className="block bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent font-light mt-2">
-              Loren Lin
+              Prajwal G H
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_1s_ease-out_1.8s_forwards]">
-            Full-stack developer crafting exceptional digital experiences
+            Full-Stack Developer & AI/ML Enthusiast
           </p>
           
-          <p className="text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_1s_ease-out_2.2s_forwards]">
-            Specializing in modern web technologies with a focus on clean architecture and thoughtful design
+          <p className="text-base text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_1s_ease-out_2.2s_forwards]">
+            Skilled in Python, React.js, Node.js, and ML technologies. Proven leadership and tech innovation.
           </p>
+
+          {/* Contact Info */}
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-12 opacity-0 animate-[fade-in_1s_ease-out_2.4s_forwards]">
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Phone size={16} />
+              <span className="font-light">+91 7022125625</span>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-400">
+              <MapPin size={16} />
+              <span className="font-light">Hubbali</span>
+            </div>
+          </div>
           
           <div className="flex items-center justify-center space-x-8 mb-20 opacity-0 animate-[fade-in_1s_ease-out_2.6s_forwards]">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/10 rounded-2xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:bg-white/5 hover:shadow-lg hover:shadow-white/10 group">
@@ -50,7 +63,7 @@ export const HeroSection = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-4 border border-white/10 rounded-2xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:bg-white/5 hover:shadow-lg hover:shadow-white/10 group">
               <Linkedin size={24} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
-            <a href="mailto:hello@lorenclin.co" className="p-4 border border-white/10 rounded-2xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:bg-white/5 hover:shadow-lg hover:shadow-white/10 group">
+            <a href="mailto:prajwalgh13@gmail.com" className="p-4 border border-white/10 rounded-2xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:bg-white/5 hover:shadow-lg hover:shadow-white/10 group">
               <Mail size={24} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
             </a>
           </div>
