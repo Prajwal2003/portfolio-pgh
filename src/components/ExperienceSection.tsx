@@ -1,5 +1,5 @@
 
-import { briefcase, calendar, map-pin } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
@@ -75,17 +75,17 @@ export const ExperienceSection = () => {
                     </h3>
                     <div className="flex items-center space-x-6 text-gray-400">
                       <div className="flex items-center space-x-2">
-                        <briefcase size={16} className="opacity-60" />
+                        <Briefcase size={16} className="opacity-60" />
                         <span className="font-light">{experience.company}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <map-pin size={16} className="opacity-60" />
+                        <MapPin size={16} className="opacity-60" />
                         <span className="font-light">{experience.location}</span>
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2 text-gray-500 mt-4 md:mt-0">
-                    <calendar size={16} className="opacity-60" />
+                    <Calendar size={16} className="opacity-60" />
                     <span className="font-light text-sm tracking-wide">{experience.period}</span>
                   </div>
                 </div>
