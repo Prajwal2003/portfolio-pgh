@@ -21,7 +21,7 @@ export const HeroSection = () => {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <div className="flex flex-col items-center justify-center my-[60px]">
+        <div className="flex flex-col items-center justify-center my-[120px]">
           <div className="flex items-center justify-center mb-8 opacity-0 animate-[fade-in_1s_ease-out_0.5s_forwards]">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/30"></div>
             <span className="text-white/60 font-light text-sm tracking-[0.3em] mx-6 uppercase">Welcome</span>
