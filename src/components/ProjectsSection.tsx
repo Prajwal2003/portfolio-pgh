@@ -1,36 +1,67 @@
-import { ExternalLink, Github, Star } from "lucide-react";
+
+import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    id: "lms-aspiring-gems",
+    title: "LMS for Aspiring Gems",
+    description: "Developed a full-stack Learning Management System using Node.js, Express, React, and SQL. Implemented secure authentication, content uploads, quizzes, progress tracking, and admin dashboards.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    technologies: ["React.js", "Node.js", "Express.js", "MySQL", "REST APIs"],
     githubUrl: "https://github.com",
+    period: "May 2025"
   },
   {
-    id: "task-management-app",
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
-    technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
+    id: "smart-traffic-management",
+    title: "Smart Traffic Management System",
+    description: "Developed an AI-driven traffic management system leveraging YOLOv11 for real-time vehicle detection and classification from CCTV feeds. Implemented adaptive traffic signal control using dynamic green time algorithms.",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Python", "YOLOv11", "Computer Vision", "Machine Learning", "Streamlit"],
     githubUrl: "https://github.com",
+    period: "Oct 2024 - Feb 2025"
   },
   {
-    id: "analytics-dashboard",
-    title: "Analytics Dashboard",
-    description: "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
+    id: "twitter-web-scraping",
+    title: "Twitter Web Scraping",
+    description: "Uses proxy server, IP rotation and opens up Twitter, opens up the trending page and gets top 5 trending topics. Stores these in the Database for webpage to pick and display.",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Python", "Selenium", "Flask", "MongoDB", "Proxy Server"],
     githubUrl: "https://github.com",
+    period: "Jan 2025"
+  },
+  {
+    id: "automated-seating-arrangement",
+    title: "Automated Seating Arrangement System",
+    description: "Designed and implemented an automated exam seating arrangement system for our college, replacing the previously used manual process. Allows users to add students through Excel or CSV format in batches.",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "jQuery"],
+    githubUrl: "https://github.com",
+    period: "Feb 2024 - May 2024"
+  },
+  {
+    id: "resource-chain",
+    title: "ResourceChain",
+    description: "Designed a user-friendly mobile application facilitating donors' clothes, medicine, and edibles. Implemented a system where spotters identify individuals in need and update the app with details.",
+    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Flutter", "API Integration", "Front-End Design"],
+    githubUrl: "https://github.com",
+    period: "Aug 2023 - Dec 2023"
+  },
+  {
+    id: "weather-webpage",
+    title: "Weather Webpage",
+    description: "Developed a dynamic website that utilizes location detection to provide accurate weather updates for a week ahead. Implemented features to display wind speed, humidity, and other weather parameters.",
+    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80",
+    technologies: ["HTML", "CSS", "JavaScript", "API", "jQuery"],
+    githubUrl: "https://github.com",
+    period: "May 2023 - Jun 2023"
   }
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-32 bg-gray-950 relative">
+    <section id="projects" className="py-32 bg-black relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-8">
@@ -61,9 +92,9 @@ export const ProjectsSection = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute top-4 right-4 z-20 group-hover:scale-110 transition-transform duration-300">
-                  <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-2 group-hover:border-white/30 transition-all duration-300">
-                    <Star className="text-gray-400 group-hover:text-white transition-colors duration-300" size={16} />
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-1 group-hover:border-white/30 transition-all duration-300">
+                    <span className="text-gray-400 group-hover:text-white transition-colors duration-300 text-xs font-light">{project.period}</span>
                   </div>
                 </div>
               </div>

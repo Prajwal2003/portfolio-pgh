@@ -22,12 +22,12 @@ export const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="py-32 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+    <section id="education" className="py-32 bg-gray-950 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center mb-8">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/30"></div>
-            <span className="text-gray-400 font-light text-sm tracking-widest mx-8 uppercase">Education</span>
+            <span className="text-gray-400 font-light text-sm tracking-[0.3em] mx-8 uppercase">Education</span>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/30"></div>
           </div>
           <h2 className="text-5xl md:text-6xl font-extralight text-white mb-8 tracking-tight">
@@ -42,7 +42,7 @@ export const EducationSection = () => {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all duration-500 hover:bg-white/5 group"
+              className="bg-gray-900 rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 group"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <h3 className="text-2xl font-light text-white mb-2 md:mb-0 group-hover:text-gray-100 transition-colors duration-300">

@@ -1,5 +1,6 @@
 
 import { ArrowDown, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+
 export const HeroSection = () => {
   const scrollToAbout = () => {
     const element = document.getElementById("about");
@@ -9,16 +10,18 @@ export const HeroSection = () => {
       });
     }
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-800/30 to-gray-700/30 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
         <div className="absolute top-1/2 right-1/3 w-80 h-80 bg-gradient-to-r from-white/5 to-gray-600/20 rounded-full mix-blend-overlay filter blur-3xl animate-pulse" style={{
-        animationDelay: '2s'
-      }}></div>
+          animationDelay: '2s'
+        }}></div>
         <div className="absolute bottom-1/3 left-1/2 w-72 h-72 bg-gradient-to-r from-gray-700/20 to-gray-800/30 rounded-full mix-blend-overlay filter blur-3xl animate-pulse" style={{
-        animationDelay: '4s'
-      }}></div>
+          animationDelay: '4s'
+        }}></div>
       </div>
 
       <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
@@ -29,12 +32,14 @@ export const HeroSection = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/30"></div>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight text-white mb-8 tracking-tight opacity-0 animate-[fade-in_1.2s_ease-out_1s_forwards] leading-none">
-            <span className="block font-thin">Hi, I'm</span>
-            <span className="block bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent font-light mt-2">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white mb-6 tracking-tight opacity-0 animate-[fade-in_1.2s_ease-out_1s_forwards] leading-none">
+            <span className="block font-thin text-3xl md:text-4xl lg:text-5xl mb-2">Hi, I'm</span>
+            <span className="block bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent font-light">
               Prajwal G H
             </span>
           </h1>
+          
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-white/40 to-transparent mb-8 opacity-0 animate-[fade-in_1s_ease-out_1.5s_forwards]"></div>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_1s_ease-out_1.8s_forwards]">
             Full-Stack Developer & AI/ML Enthusiast
@@ -75,5 +80,6 @@ export const HeroSection = () => {
           </button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
