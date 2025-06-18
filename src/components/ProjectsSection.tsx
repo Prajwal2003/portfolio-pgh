@@ -1,30 +1,30 @@
-
 import { ExternalLink, Github, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
+    id: "ecommerce-platform",
     title: "E-Commerce Platform",
     description: "A modern e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
   },
   {
+    id: "task-management-app",
     title: "Task Management App",
     description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
     technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
   },
   {
+    id: "analytics-dashboard",
     title: "Analytics Dashboard",
     description: "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
   }
 ];
 
@@ -97,15 +97,13 @@ export const ProjectsSection = () => {
                     <Github size={16} className="group-hover/link:rotate-12 transition-transform duration-300" />
                     <span className="font-light text-sm tracking-wide">Code</span>
                   </a>
-                  <a 
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link 
+                    to={`/project/${project.id}`}
                     className="flex items-center space-x-2 border border-white/20 text-white px-4 py-2.5 rounded-2xl hover:border-white/40 hover:bg-white/5 transition-all duration-500 group/link hover:scale-105 hover:shadow-lg hover:shadow-white/10"
                   >
                     <ExternalLink size={14} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
                     <span className="font-light text-xs tracking-[0.1em] uppercase">View</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
