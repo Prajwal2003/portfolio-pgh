@@ -1,30 +1,21 @@
-
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Senior Full Stack Developer",
-    company: "Tech Innovations Inc.",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
-    description: "Led development of scalable web applications using React, Node.js, and AWS. Mentored junior developers and implemented CI/CD pipelines that reduced deployment time by 60%.",
-    technologies: ["React", "TypeScript", "Node.js", "AWS", "Docker"]
+    title: "Project Intern",
+    company: "Northtron Entitysoft Corps",
+    location: "Dharwad",
+    period: "03/2025 - 05/2025",
+    description: "Built a full-stack e-commerce web app with React, Django, PostgreSQL, and AWS S3. Enabled secure JWT authentication and dual-role (buyer/seller) user access. Collaborated in an agile team with GitHub and Slack for modular development.",
+    technologies: ["React", "Django", "PostgreSQL", "AWS S3", "JWT", "GitHub", "Slack"]
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Solutions Co.",
-    location: "New York, NY",
-    period: "2020 - 2022",
-    description: "Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive, user-friendly interfaces.",
-    technologies: ["Vue.js", "Python", "PostgreSQL", "Redis", "Kubernetes"]
-  },
-  {
-    title: "Frontend Developer",
-    company: "StartupX",
-    location: "Austin, TX",
-    period: "2019 - 2020",
-    description: "Built responsive web applications and improved user experience across multiple products. Worked closely with UX designers to implement pixel-perfect designs.",
-    technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"]
+    title: "Software Developer Internship",
+    company: "Falca E Solutions",
+    location: "Bengaluru",
+    period: "07/2024 - 08/2024",
+    description: "Utilized Python with Pandas, NumPy, and Gspread to automate data processing and business reporting. Assisted in database migration and mapping to MongoDB for seamless integration. Developed a real-time estimation tool for field workers to generate on-the-spot client estimates.",
+    technologies: ["Python", "Pandas", "NumPy", "Gspread", "MongoDB"]
   }
 ];
 
